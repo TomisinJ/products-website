@@ -3,7 +3,6 @@
 }
 
 .banner {
-    /* background-color: #000000; */
     text-align: center;
     padding: 5px;
 }
@@ -13,7 +12,6 @@
 }
 
 .primary-nav {
-    /* background-color: aqua; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,20 +21,9 @@
 padding: 20px;
 }
 
-.left-nav {
-    /* background-color: green; */
-}
-
-.right-nav {
-    /* background-color: yellow; */
-
-}
-
-
 ul {
     display: flex;
     justify-content: center;
-    /* background-color: pink; */
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -65,7 +52,6 @@ a:hover {
   }
   
 .grid-item {
-    /* background-color: purple; */
     text-align: center;
 }
 
@@ -87,8 +73,4 @@ a:hover {
 
 .product-container img {
     width: 35%;
-}
-
-.product-description {
-
 }
