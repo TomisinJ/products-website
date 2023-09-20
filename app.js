@@ -45,7 +45,7 @@ let shopData = [{
 let generateShop = () => {
     return (shop.innerHTML = shopData.map((item) => {
         return `
-        <div class="grid-item" id="product-item2">
+        <div class="grid-item" id="product-item-${item.id}">
         <img src="img/drawing2.jpg" alt="a picture of the item" />
         <p><a href="product.html">${item.productName}</a></p>
         <p>${item.productDescription}</p>
