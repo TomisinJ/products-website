@@ -5,6 +5,7 @@
 <head>
     <title>My website portfolio</title>
     <link rel ="stylesheet" type="text/css" href="homepage.css">
+    <!-- <script src="app.js"></script> -->
 </head>
 
     <body class="container">
@@ -39,14 +40,27 @@
 
         
 
-        <div class="product-container">
+        <div class="product-container" id="product-list">
             <img src="img/shirt-test.webp" alt="a picture of the item">
 
             <div class="product-description">
-                <p>ITEM1</p>
-                <p>This is a really long description. This is a really long description. This is a really long description. This is a really long description. This is a really long description. This is a really long description.</p>
-                <p>£35</p>
-                <button>Add to basket</button>
+
+                <p>ITEM'1</p>
+                <p id="changing">This is a really long description. This is a really long description. This is a really long description. This is a really long description. This is a really long description. This is a really long description.</p>
+                <p id="text" onclick=changeText(this)>£35</p>
+                <script>
+                    function changeText(id) {
+                        id.innerHTML = 'hellooooo';
+                    }
+                    
+                    document.getElementById("changing").addEventListener("click", function() {
+                        alert("HellooooooooooWorld");
+                    })
+
+                </script>
+
+
+                <button id="button-item">Add to basket</button>
             </div>
             
         </div>
