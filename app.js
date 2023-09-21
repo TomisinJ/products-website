@@ -41,15 +41,21 @@ let shopData = [{
 }
 ]
 
-
 let generateShop = () => {
     return (shop.innerHTML = shopData.map((item) => {
+        // will have to check this line below
+        let { id, productName, productDescription, productPrice, productImage } = item
         return `
-        <div class="grid-item" id="product-item-${item.id}">
+        <div class="grid-item" id="product-item-${id}">
         <img src="img/drawing2.jpg" alt="a picture of the item" />
-        <p><a href="product.html">${item.productName}</a></p>
-        <p>${item.productDescription}</p>
-        <p>${item.productPrice}</p>
+        <p><a href="product.html">${productName}</a></p>
+        <p>${productDescription}</p>
+        <p>${productPrice}</p>
+        <div class="counter-buttons">
+            <i onclick="decrement(${id})" class="minus">-</i>
+            <div id=${id} class="quantity">0</div>
+            <i onclick="increment(${id})" class="plus">+</i>
+        </div>
         </div>
         `
     }).join("")
@@ -57,4 +63,14 @@ let generateShop = () => {
 
 generateShop()
 
-console.log(shop);
+let increment = (id) => {
+    console.log(id);
+};
+
+
+let decrement = (id) => {
+    console.log(id);
+};
+
+
+let update = () => {};
