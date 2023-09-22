@@ -47,7 +47,7 @@ let generateShop = () => {
         let { id, productName, productDescription, productPrice, productImage } = item
         return `
         <div class="grid-item" id="product-item-${id}">
-        <img src="img/drawing2.jpg" alt="a picture of the item" />
+        <img src="img/M50.jpg" alt="a picture of the item" />
         <p><a href="product.html">${productName}</a></p>
         <p>${productDescription}</p>
         <p>${productPrice}</p>
