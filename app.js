@@ -43,7 +43,7 @@ let shopData = [{
 
 let generateShop = () => {
     return (shop.innerHTML = shopData.map((item) => {
-        // will have to check this line below
+        // destructuring assignment
         let { id, productName, productDescription, productPrice, productImage } = item
         return `
         <div class="grid-item" id="product-item-${id}">
@@ -52,6 +52,10 @@ let generateShop = () => {
         <p>${productDescription}</p>
         <p>${productPrice}</p>
         <div class="counter-buttons">
+
+
+
+
             <i onclick="decrement(${id})" class="minus">-</i>
             <div id=${id} class="quantity">0</div>
             <i onclick="increment(${id})" class="plus">+</i>
@@ -63,8 +67,13 @@ let generateShop = () => {
 
 generateShop()
 
+
+
+
+
+
 let increment = (id) => {
-    console.log(id);
+
 };
 
 
@@ -72,5 +81,6 @@ let decrement = (id) => {
     console.log(id);
 };
 
-
 let update = () => {};
+
+
