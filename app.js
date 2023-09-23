@@ -51,7 +51,7 @@ let shopData = [{
 let generateShop = () => {
     return (shop.innerHTML = shopData.map((item) => {
         // destructuring assignment
-        let { id, productName, productDescription, productPrice, productImage, count} = item
+        let { id, productName, productDescription, productPrice, productImage } = item
         return `
         <div class="grid-item" id="product-item-${id}">
             <img src="${productImage}" alt="a picture of the item" />
@@ -77,8 +77,7 @@ generateShop()
 
 const quantity = document.querySelectorAll('#quantity')
 const increase = document.querySelectorAll('.increase')
-
-// const decrease = document.querySelector('.decrease')
+const decrease = document.querySelectorAll('.decrease')
 
 let count = 0
 
@@ -87,7 +86,6 @@ function increaseCount() {
     console.log(count)
     quantity.forEach(amount => {
         amount.innerHTML = count;
-        // console.log(amount);
     });
 }
 
@@ -95,28 +93,17 @@ increase.forEach( countingclick => {
     countingclick.addEventListener('click', increaseCount);
 });
 
-// function decreaseCount() {
-//     if (count > 0) {
-//         count -= 1;
-//         quantity.innerHTML = count;
-//     } else {
-//         return
-//     }
-// }
+function decreaseCount() {
+    if (count > 0) {
+        count -= 1;
+        quantity.forEach(amount => {
+            amount.innerHTML = count;
+        });
+    } else {
+        return
+    }
+}
 
-// decrease.addEventListener('click', decreaseCount);
-
-
-
-// let increment = (id) => {
-// };
-
-// let decrement = (id) => {
-//     console.log(id);
-// };
-
-// let update = () => {};
-
-            // <i onclick="decrement(${id})" class="minus">-</i>
-            // <div id=${id} class="quantity">0</div>
-            // <i onclick="increment(${id})" class="plus">+</i>
+decrease.forEach( countingclick => {
+    countingclick.addEventListener('click', decreaseCount);
+});
