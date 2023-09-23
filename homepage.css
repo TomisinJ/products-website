@@ -19,12 +19,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* backdrop-filter: blur(50px); */
+
 }
 
 .primary-nav a {
 padding: 20px;
 color: inherit;
 }
+
+/* .nav-as-list {
+    backdrop-filter: blur(50px);
+} */
 
 .nav-as-list a {
     color: inherit;
