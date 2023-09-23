@@ -5,56 +5,61 @@ let shop = document.getElementById('all-products');
 // map each item to the shop item format
 
 let shopData = [{
-    "id": "1A",
-        productName: "top",
-        productPrice: 12.99,
-        productDescription: "this is a nice top",
-        productImage: "image1"
+    id: "1A",
+    productName: "TOP",
+    productPrice: 12.99,
+    productDescription: "this is a nice top",
+    productImage: "image1"
 },
 {
-    "id": "2B",
-        productName: "bottom",
-        productPrice: 13.99,
-        productDescription: "this is a nice bottoms",
-        productImage: "image2"
+    id: "2B",
+    productName: "TROUSERS",
+    productPrice: 13.99,
+    productDescription: "this is a nice bottoms",
+    productImage: "image2"
 },
 {
-    "id": "3C",
-        productName: "jacket",
-        productPrice: 14.99,
-        productDescription: "this is a nice jacket",
-        productImage: "image3"
+    id: "3C",
+    productName: "JACKET",
+    productPrice: 14.99,
+    productDescription: "this is a nice jacket",
+    productImage: "image3"
 },
 {
-    "id": "4D",
-        productName: "hat",
-        productPrice: 15.99,
-        productDescription: "this is a nice hat",
-        productImage: "image4"
+    id: "4D",
+    productName: "HAT",
+    productPrice: 15.99,
+    productDescription: "this is a nice hat",
+    productImage: "image4"
 },
 {
-    "id": "5E",
-        productName: "shoes",
-        productPrice: 16.99,
-        productDescription: "this is a nice shoes",
-        productImage: "image5"
+    id: "5E",
+    productName: "SHOES",
+    productPrice: 16.99,
+    productDescription: "this is a nice shoes",
+    productImage: "image5"
 }
 ]
 
 let generateShop = () => {
     return (shop.innerHTML = shopData.map((item) => {
         // destructuring assignment
-        let { id, productName, productDescription, productPrice, productImage } = item
+        let { id, productName, productDescription, productPrice, productImage, count} = item
         return `
         <div class="grid-item" id="product-item-${id}">
-        <img src="img/M50.jpg" alt="a picture of the item" />
-        <p><a href="product.html">${productName}</a></p>
-        <p>${productDescription}</p>
-        <p>${productPrice}</p>
-            <div class="counter-buttons-${id}">
-                <button class="buttonClass increase">+</button>
-                <span id="quantity">0</span>
-                <button class="buttonClass decrease">-</button>
+            <img src="img/top.webp" alt="a picture of the item" />
+            <div class="details">
+                <div class="text-details"><a href="product.html">
+                    <p>${productName}</p>
+                    <p>${productDescription}</p>
+                    <p>${productPrice}</p>
+                    </a>
+                </div>
+                <div class="counter" id="counter-buttons-${id}">
+                    <button class="buttonClass increase">+</button>
+                    <span id="quantity">0</span>
+                    <button class="buttonClass decrease">-</button>
+                </div>
             </div>
         </div>
         `
@@ -65,17 +70,17 @@ generateShop()
 
 const quantity = document.querySelectorAll('#quantity')
 const increase = document.querySelectorAll('.increase')
+
 // const decrease = document.querySelector('.decrease')
 
 let count = 0
 
 function increaseCount() {
     count += 1;
-    console.log(quantity);
-
+    console.log(count)
     quantity.forEach(amount => {
         amount.innerHTML = count;
-        console.log(amount);
+        // console.log(amount);
     });
 }
 

@@ -1,13 +1,17 @@
 .container {
-    font-family: Arial;
+    font-family:'Futura';
+    background: linear-gradient(to bottom, rgb(131, 168, 8), transparent);
+    margin: 0;
 }
 
 .banner {
     text-align: center;
     padding: 5px;
+    background-color: rgb(244, 216, 221);
 }
 
 .banner p {
+    color: rgb(191, 143, 151);
     margin: 0;
 }
 
@@ -19,6 +23,15 @@
 
 .primary-nav a {
 padding: 20px;
+color: inherit;
+}
+
+.nav-as-list a {
+    color: inherit;
+}
+
+.nav-as-list :hover {
+    background: rgb(255, 225, 0);
 }
 
 ul {
@@ -31,7 +44,7 @@ ul {
 
 li {
     display: inline;
-    padding: 10px 20px;
+    padding: 0px 20px;
 }
 
 a {
@@ -46,22 +59,64 @@ a:hover {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4,minmax(0,1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
+  }
+
+  @media (min-width: 64rem) {  /* Assuming 64rem (1024px) as a breakpoint for larger screens */
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); 
+    }
   }
   
 .grid-item {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    border-width: 10px;
 }
 
 .grid-item img {
-    width: 60%;
+    width: 100%;
+    align-self: center;
+    border: 2px dashed darkolivegreen;    
+    transition: transform 0.3s;
+}
+
+.grid-item img:hover {
+    transform: rotate(10deg);
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    margin-top: 10px;
+    align-self: left; 
+    width: 100%;
+}
+
+.text-details a {
+    color: inherit;
+}
+
+.text-details :hover {
+    background: rgb(255, 225, 0);
 }
 
 
+.counter button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 .grid-item p {
     margin: 0;
+    font-size: small;
+    text-align: left;
 }
 
 .product-container {
@@ -71,6 +126,6 @@ a:hover {
     margin: 10% 20%;
 }
 
-.product-container img {
+/* .product-container img {
     width: 35%;
-} 
+}  */
