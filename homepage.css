@@ -45,6 +45,7 @@ ul {
 li {
     display: inline;
     padding: 0px 20px;
+    margin-bottom: 15px;
 }
 
 a {
@@ -126,6 +127,14 @@ a:hover {
     margin: 10% 20%;
 }
 
-/* .product-container img {
-    width: 35%;
-}  */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    background-color: rgb(244, 216, 221);
+}
+
+.footer a {
+    color: inherit;
+}

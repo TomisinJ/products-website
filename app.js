@@ -9,35 +9,42 @@ let shopData = [{
     productName: "TOP",
     productPrice: 12.99,
     productDescription: "this is a nice top",
-    productImage: "image1"
+    productImage: "img/top.webp"
 },
 {
     id: "2B",
-    productName: "TROUSERS",
+    productName: "TROUSER",
     productPrice: 13.99,
     productDescription: "this is a nice bottoms",
-    productImage: "image2"
+    productImage: "img/shorts.webp"
 },
 {
     id: "3C",
     productName: "JACKET",
     productPrice: 14.99,
     productDescription: "this is a nice jacket",
-    productImage: "image3"
+    productImage: "img/jumper.webp"
 },
 {
     id: "4D",
     productName: "HAT",
     productPrice: 15.99,
     productDescription: "this is a nice hat",
-    productImage: "image4"
+    productImage: "img/hat.webp"
 },
 {
     id: "5E",
-    productName: "SHOES",
+    productName: "JEWELLERY",
     productPrice: 16.99,
-    productDescription: "this is a nice shoes",
-    productImage: "image5"
+    productDescription: "this is a nice necklace",
+    productImage: "img/keyring.webp"
+},
+{
+    id: "6F",
+    productName: "BAG",
+    productPrice: 23.99,
+    productDescription: "this is a nice bag",
+    productImage: "img/bag.webp"
 }
 ]
 
@@ -47,7 +54,7 @@ let generateShop = () => {
         let { id, productName, productDescription, productPrice, productImage, count} = item
         return `
         <div class="grid-item" id="product-item-${id}">
-            <img src="img/top.webp" alt="a picture of the item" />
+            <img src="${productImage}" alt="a picture of the item" />
             <div class="details">
                 <div class="text-details"><a href="product.html">
                     <p>${productName}</p>
